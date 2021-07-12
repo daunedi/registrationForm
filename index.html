@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/static/css.css">
+        <link rel="stylesheet" type="text/css" href="/static/responsive.css">
+        <title>Registracija</title>
+    </head>
+    <body>
+        <main>
+            <button onclick="changeLanguage('eng')">EN</button>
+            <button onclick="changeLanguage('hr')">HR</button>
+
+            <h1 id="formTitle">Registracija novih korisnika</h1>
+
+            <form action="/register" method="POST">
+                <label for="companyName">Ime tvrtke</label>
+                <input type="text" id="companyName" name="companyName" placeholder="IME TVRTKE" required><br>
+                <label for="contact">Kontakt osoba</label>
+                <input type="text" id="contact" name="contact" placeholder="KONTAKT OSOBA" required><br>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="EMAIL" required><br>
+                <div class="identityProvider">
+                    <label for="identityProvider">Identity provider</label>
+                    <select id="identityProviderSelect" name="identityProvider" required>
+                        <option disabled hidden selected>Identity Provider</option>
+                        <option value="activeDirectory">Active Directory</option>
+                        <option value="azureOffice">Azure AD/Office 365</option>
+                        <option value="microsoftADFS">Microsoft ADFS</option>
+                        <option value="googleApps">Google Apps</option>
+                        <option value="customOath2">Custom Oath2</option>
+                    </select><br>
+                </div>
+                <label for="deviceNumber">Broj mobilnih uređaja</label>
+                <input type="number" id="deviceNumber" name="deviceNumber" placeholder="BROJ MOBILNIH UREĐAJA" required><br>
+                <input type="submit" value="Pošalji" id="formButton">
+            </form>
+
+        </main>
+        <script src ="/static/lang.js"></script>
+    </body>
+</html>
