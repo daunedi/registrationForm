@@ -86,7 +86,24 @@ button{
     color: #474544;
     transition: all 0.3s;
 }
-button:hover{
+.backButton{
+    background: none;
+    border: none;
+    border-radius: 0.17em;
+    color: #474544;
+    cursor: pointer;
+    display: block;
+    font-size: 0.88em;
+    font-weight: bold;
+    outline: none;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    box-shadow: 0 2px 5px #474544;
+    margin-top: 2em;
+    margin-left: 2em;
+}
+button:hover, .backButton:hover{
     background: #474544;
     color: antiquewhite;
 }

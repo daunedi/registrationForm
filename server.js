@@ -12,7 +12,7 @@ app.get('/submitted', function(req, res) {
 app.use('/static', express.static('static'));
 
 app.listen(3000, function () {
-  console.log("Server is running on localhost3000");
+  console.log("Server is running on localhost:3000");
 });
 
 
@@ -35,6 +35,23 @@ app.listen(3000, function () {
       }
       console.log('Connection successful');
   });
+
+const createTable = `
+CREATE TABLE IF NOT EXISTS users (
+    companyName varchar,
+    contact varchar,
+    email varchar,
+    identityProvider varchar,
+    deviceNumber int
+);`
+
+client.query(createTable, (err, res) => {
+  if (err) {
+      console.error(err);
+      return;
+  }
+  console.log('Table available');
+});
 
 
 app.use(express.urlencoded({
