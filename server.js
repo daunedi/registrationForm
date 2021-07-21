@@ -15,26 +15,26 @@ app.listen(3000, function () {
   console.log("Server is running on localhost:3000");
 });
 
+const dotenv = require('dotenv');
+dotenv.config();
 
-  const { Client } = require('pg')
+const { Client } = require('pg');
+const client = new Client({
+    user: process.env.PGUSER,
+    host: process.env.PGHOST,
+    database: process.env.PGDATABASE,
+    password: process.env.PGPASSWORD,
+    port: process.env.PGPORT,
+});
+client.connect()
 
-  const client = new Client({
-      user: 'postgres',
-      host: 'localhost',
-      database: 'testdb',
-      password: 'pass',
-      port: 5432,
-  });
-  
-  client.connect()
-  
-  client.query('SELECT NOW()', (err, res) => {
-      if (err) {
-          console.error(err);
-          return;
-      }
-      console.log('Connection successful');
-  });
+client.query('SELECT NOW()', (err, res) => {
+    if (err) {
+        console.error(err);
+        return;
+    }
+    console.log('Connection successful');
+});
 
 const createTable = `
 CREATE TABLE IF NOT EXISTS users (
