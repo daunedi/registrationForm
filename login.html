@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="hr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/static/css.css">
+        <title>Login</title>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><button class="lang" onclick="changeLanguage('eng')">EN</button></li>
+                <li><button class="lang" onclick="changeLanguage('hr')">HR</button></li>
+                <li><button class="backButton" onclick="window.location='/';">HOME</button></li>
+                <li><button class="users" onclick="window.location='users';">USERS</button></li>
+                <li><button class="login" onclick="window.location='login';">LOGIN</button></li>
+            </ul>      
+        </nav>
+            <h1 id="formTitleLogin">User login</h1>
+            <form action="/login" method="GET">
+                <label for="userName">User name</label>
+                <input type="text" id="userName" name="userName" placeholder="USER NAME" required><br>
+                <input type="password" id="password" name="password" placeholder="PASSWORD" required><br>
+                <input type="submit" value="LOGIN" id="formButtonLogin">
+            </form>
+        <script src ="static/lang.js"></script>
+    </body>
+</html>

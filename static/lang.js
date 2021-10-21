@@ -3,12 +3,17 @@ function changeLanguage(lang){
     location.reload();
 }
 var language = {
-    eng:{
-        welcome: "New user registration",
-        name: "COMPANY NAME",
-        contact: "CONTACT NAME",
-        devNum: "NUMBER OF DEVICES",
-        button: "SEND",
+    hr:{
+        welcome: "Registracija novih korisnika",
+        name: "IME TVRTKE",
+        contact: "KONTAKT OSOBA",
+        devNum: "BROJ MOBILNIH UREĐAJA",
+        button: "POŠALJI",
+        login: "Prijava korisnika",
+        loginButton: "PRIJAVA",
+        loginUser: "KORISNIČKO IME",
+        loginPass: "LOZINKA",
+        submitted: "USPJEŠNA REGISTRACIJA"
     }
 }
 var siteTitle = document.getElementById("formTitle");
@@ -16,13 +21,23 @@ var compName = document.getElementById("companyName");
 var contact = document.getElementById("contact");
 var deviceNumber = document.getElementById("deviceNumber");
 var buttonSend = document.getElementById("formButton");
+var loginTitle = document.getElementById("formTitleLogin");
+var loginButt = document.getElementById("formButtonLogin");
+var loginUsername = document.getElementById("userName");
+var loginPassword = document.getElementById("password");
+var titleSubmitted = document.getElementById("formTitleSubmit")
 
 if(window.location.hash){
-    if(window.location.hash == "#eng"){
-        siteTitle.textContent = language.eng.welcome;
-        compName.placeholder = language.eng.name;
-        contact.placeholder = language.eng.contact;
-        deviceNumber.placeholder = language.eng.devNum;
-        buttonSend.value = language.eng.button;
+    if(window.location.hash == "#hr"){
+        siteTitle.textContent = language.hr.welcome;
+        compName.placeholder = language.hr.name;
+        contact.placeholder = language.hr.contact;
+        deviceNumber.placeholder = language.hr.devNum;
+        buttonSend.value = language.hr.button;
+        loginTitle.textContent = language.hr.login;
+        loginButt.value = language.hr.loginButton;
+        loginUsername.placeholder = language.hr.loginUser;
+        loginPassword.placeholder = language.hr.loginPass;
+        titleSubmitted.textContent = language.hr.titleSubmitted;
     }
 }

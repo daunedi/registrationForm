@@ -4,14 +4,18 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="/static/css.css">
-        <link rel="stylesheet" type="text/css" href="/static/responsive.css">
-        <title>Registracija</title>
+        <title>Registration</title>
     </head>
     <body>
-        <input class="backButton" type="button" onclick="location.href='/'" value="Back" />
-        <main>
-            <h1 id="formTitle">Form submitted</h1>
-        </main>
+        <nav>
+            <ul>
+                <li><button class="lang" onclick="changeLanguage('eng')">EN</button></li>
+                <li><button class="lang" onclick="changeLanguage('hr')">HR</button></li>
+                <li><button class="backButton" onclick="window.location='/';">HOME</button></li>
+                <li><button class="login" onclick="window.location='login';">LOGIN</button></li>
+            </ul>      
+        </nav>
+            <h1 id="formTitleSubmit">Form submitted</h1>
         <script src ="/static/lang.js"></script>
     </body>
 </html>

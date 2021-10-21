@@ -9,6 +9,14 @@ app.get('/submitted', function(req, res) {
   res.sendFile(__dirname + '/formSubmitted.html')
 });
 
+app.get('/login', function(req, res) {
+  res.sendFile(__dirname + '/login.html')
+});
+
+app.get('/users', function(req, res) {
+  res.sendFile(__dirname + '/users.html')
+});
+
 app.use('/static', express.static('static'));
 
 app.listen(3000, function () {
@@ -74,7 +82,19 @@ app.post('/register', (req, res) => {
       }
       console.log('Data insert successful');
   });
-
   res.redirect('/submitted');
   res.end()
 })
+
+app.get('/userList', (req, res) => {
+  const userData = `SELECT * FROM users`
+  client.query(userData, (err, res) => {
+  if (err) {
+      console.error(err);
+      return;
+  }
+  console.log ('Data pull successful');
+});
+res.end()
+})
+

@@ -6,37 +6,59 @@ body,html{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
 }
-main{
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2em;
-    background-color: white;
-    padding: 1em;
-    padding-bottom: 3em;
+footer{
+    padding: auto;
 }
 h1{
     text-align: center;
     font-size: 1.7em;
-    padding-top: 1em;
     padding-bottom: 1em;
-    margin-bottom: 1.5em;
-    box-shadow: 0 2px 5px #474544;
+    margin-bottom: 2em;
+    padding-top: 0.5em;
+    box-shadow: 0 4px 4px #474544;
 }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #474544;
+  }
+  
+  li .lang{
+      float: right;
+  }
+  
+  li button {
+    display: block;
+    background-color: #474544;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    float:left;
+    border: none;
+  }
+  
+  li button:hover{
+    background-color: #111;
+  }
+  
 form{
     display: block;
-    width: 70%;
+    width: 85%;
     margin: auto;
     font-size: 1.3em;
 }
+
 label{
     display: none;
 }
-select,input[type='text'],input[type='email'],input[type='number']{
+select,input[type='text'],input[type='email'],input[type='number'],input[type='password']{
     font-family: Arial, Helvetica, sans-serif;
     background: none;
     border: none;
-    border-bottom: solid 2px #474544;
+    border-bottom: solid 1px #61605f;
     color: #474544;
     font-size: 1em;
     font-weight: 400;
@@ -50,7 +72,7 @@ select,input[type='text'],input[type='email'],input[type='number']{
 ::placeholder{
     opacity: 0.8;
 }
-input[type='text']:focus,input[type='email']:focus,input[type='number']:focus{
+input[type='text']:focus,input[type='email']:focus,input[type='number']:focus,input[type='password']:focus{
     outline: none;
     padding: 1em 0 0.875em 0;
 }
@@ -58,10 +80,10 @@ select{
     outline: none;
     text-transform: uppercase;
 }
-#formButton{
+#formButton, #formButtonLogin{
     background: none;
-    border: solid 1px #474544;
-    border-radius: 0.17em;
+    border: solid 1px #767473;
+    border-radius: 1em;
     color: #474544;
     cursor: pointer;
     display: block;
@@ -72,38 +94,34 @@ select{
     text-transform: uppercase;
     transition: all 0.3s;
     margin: 0 auto;
-    box-shadow: 0 2px 5px #474544;
+    box-shadow: 0 3px 5px #474544;
+    margin-bottom: 2em;
 }
-#formButton:hover{
+#formButton:hover, #formButtonLogin:hover{
     background: #474544;
     color: antiquewhite;
 }
-button{
-    background-color: white;
-    border: none;
-    border-radius: 0.17em;
-    box-shadow: 0 2px 5px #474544;
+
+table {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 95%;
+    margin: auto;
+  }
+  
+ table td, table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  table tr:nth-child(even){background-color: #f2f2f2;}
+  
+ table tr:hover {background-color: #ddd;}
+  
+  table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color:white;
     color: #474544;
-    transition: all 0.3s;
-}
-.backButton{
-    background: none;
-    border: none;
-    border-radius: 0.17em;
-    color: #474544;
-    cursor: pointer;
-    display: block;
-    font-size: 0.88em;
-    font-weight: bold;
-    outline: none;
-    padding: 5px 10px;
-    text-transform: uppercase;
-    transition: all 0.3s;
     box-shadow: 0 2px 5px #474544;
-    margin-top: 2em;
-    margin-left: 2em;
-}
-button:hover, .backButton:hover{
-    background: #474544;
-    color: antiquewhite;
-}
+  }

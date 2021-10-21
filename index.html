@@ -4,21 +4,24 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="/static/css.css">
-        <link rel="stylesheet" type="text/css" href="/static/responsive.css">
-        <title>Registracija</title>
+        <title>Registration</title>
     </head>
     <body>
-        <main>
-            <button onclick="changeLanguage('eng')">EN</button>
-            <button onclick="changeLanguage('hr')">HR</button>
-
-            <h1 id="formTitle">Registracija novih korisnika</h1>
-
+        <nav>
+            <ul>
+                <li><button class="lang" onclick="changeLanguage('eng')">EN</button></li>
+                <li><button class="lang" onclick="changeLanguage('hr')">HR</button></li>
+                <li><button class="backButton" onclick="window.location='/';">HOME</button></li>
+                <li><button class="users" onclick="window.location='users';">USERS</button></li>
+                <li><button class="login" onclick="window.location='login';">LOGIN</button></li>
+            </ul>      
+        </nav>
+            <h1 id="formTitle">New user registration</h1>
             <form action="/register" method="POST">
-                <label for="companyName">Ime tvrtke</label>
-                <input type="text" id="companyName" name="companyName" placeholder="IME TVRTKE" required><br>
-                <label for="contact">Kontakt osoba</label>
-                <input type="text" id="contact" name="contact" placeholder="KONTAKT OSOBA" required><br>
+                <label for="companyName">Company name</label>
+                <input type="text" id="companyName" name="companyName" placeholder="COMPANY NAME" required><br>
+                <label for="contact">Contact name</label>
+                <input type="text" id="contact" name="contact" placeholder="CONTACT" required><br>
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" placeholder="EMAIL" required><br>
                 <div class="identityProvider">
@@ -32,12 +35,11 @@
                         <option value="customOath2">Custom Oath2</option>
                     </select><br>
                 </div>
-                <label for="deviceNumber">Broj mobilnih uređaja</label>
-                <input type="number" id="deviceNumber" name="deviceNumber" placeholder="BROJ MOBILNIH UREĐAJA" required><br>
-                <input type="submit" value="Pošalji" id="formButton">
+                <label for="deviceNumber">Number of devices</label>
+                <input type="number" id="deviceNumber" name="deviceNumber" placeholder="NUMBER OF DEVICES" required><br>
+                <input type="submit" value="Send" id="formButton">
             </form>
-
-        </main>
         <script src ="/static/lang.js"></script>
     </body>
+    <footer></footer>
 </html>
