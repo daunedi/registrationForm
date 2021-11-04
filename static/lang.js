@@ -1,3 +1,6 @@
+{/* <li><button class="lang" onclick="changeLanguage('eng')">EN</button></li>
+<li><button class="lang" onclick="changeLanguage('hr')">HR</button></li> */}
+
 function changeLanguage(lang){
     location.hash = lang;
     location.reload();

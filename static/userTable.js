@@ -1,9 +1,12 @@
 window.onload=function(){
-    fetch('/userList', {method: 'GET'})
+    fetch('/login', {method: 'GET'})
     createUserTable();
-/*     for (let row of userData) {
-        console.log(row);
-    } */
+    //falseLogIn();
+}
+
+function falseLogIn(){
+    let tableTitle = document.getElementById('formTitleUsers');
+    tableTitle.innerHTML = "Unsuccessfull login. Try again.";
 }
 
 function createUserTable(){
