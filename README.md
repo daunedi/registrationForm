@@ -2,7 +2,7 @@
 
 This is a simple form which saves the data into a database.<br>
 
-![Screenshot2021-07-13-091820](https://user-images.githubusercontent.com/73026007/125411338-1f19ad80-e3be-11eb-95b8-34c7e931609b.png)
+![Screenshot from 2021-11-04 10-31-36](https://user-images.githubusercontent.com/73026007/140290889-42c35d32-9b0e-4325-87c9-6b5de7262638.png)
 
 Requirements: Node.js, PostgreSQL, Express framework, dotenv, bycript, pug <br>
 
