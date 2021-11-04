@@ -3,22 +3,8 @@ var app = express();
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
 
-app.get('/', function(req, res) {
-  res.sendFile(__dirname + '/index.html')
-});
-
-app.get('/submitted', function(req, res) {
-  res.sendFile(__dirname + '/formSubmitted.html')
-});
-
-app.get('/login', function(req, res) {
-  res.sendFile(__dirname + '/login.html')
-});
-
-app.get('/users', function(req, res) {
-  res.sendFile(__dirname + '/users.html')
-});
-
+app.set('view engine', 'pug');
+app.use(require('./routers'));
 app.use('/static', express.static('static'));
 
 app.listen(3000, function () {

@@ -1,0 +1,44 @@
+DOCTYPE(html)
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width,initial-scale=1.0")
+        link(rel="stylesheet" type="text/css" href="/static/css.css")
+        title Registration
+
+    body
+        nav
+            ul
+                li
+                    button(class="backButton" onclick="window.location='/';") CUSTOMER REGISTRATION
+                li
+                    button(class="users" onclick="window.location='users';") USERS
+                li
+                    button(class="login" onclick="window.location='login';") LOGIN
+
+            h1(id="formTitle") Customer registration
+            form(action="/register" method="POST")
+                label(for="companyName") Company name
+                input(type="text" id="companyName" name="companyName" placeholder="COMPANY NAME" required)
+                br
+                label(for="contact") Contact name
+                input(type="text" id="contact" name="contact" placeholder="CONTACT" required)
+                br
+                label(for="email") Email
+                input(type="email" id="email" name="email" placeholder="EMAIL" required)
+                br
+                div(class="identityProvider")
+                    label(for="identityProvider") Identity provider
+                    select(id="identityProviderSelect" name="identityProvider" required)
+                        option(disabled hidden selected) Identity Provider
+                        option(value="activeDirectory") Active Directory
+                        option(value="azureOffice") Azure AD/Office 365
+                        option(value="microsoftADFS") Microsoft ADFS
+                        option(value="googleApps") Google Apps
+                        option(value="customOath2") Custom Oath2
+                    br
+
+                label(for="deviceNumber") Number of devices
+                input(type="number" id="deviceNumber" name="deviceNumber" placeholder="NUMBER OF DEVICES" required)
+                br
+                input(type="submit" value="Send" id="formButton")

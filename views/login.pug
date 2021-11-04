@@ -1,0 +1,27 @@
+DOCTYPE(html)
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width,initial-scale=1.0")
+        link(rel="stylesheet" type="text/css" href="/static/css.css")
+        title Login
+
+    body
+        nav
+            ul
+                li
+                    button(class="backButton" onclick="window.location='/';") CUSTOMER REGISTRATION
+                li
+                    button(class="users" onclick="window.location='users';") USERS
+                li
+                    button(class="login" onclick="window.location='login';") LOGIN
+    
+            h1(id="formTitleLogin") User login
+
+            form(class="loginForm" action="/login" method="POST")
+                label(for="userName") User name
+                input(type="text" id="userName" name="userName" placeholder="USER NAME" required) 
+                br
+                input(type="password" id="password" name="password" placeholder="PASSWORD" required) 
+                br
+                input(type="submit" value="LOGIN" id="formButtonLogin")

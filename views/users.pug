@@ -1,0 +1,20 @@
+DOCTYPE(html)
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width,initial-scale=1.0")
+        link(rel="stylesheet" type="text/css" href="/static/css.css")
+        title(Users)
+      
+    body(id="body")
+        nav
+            ul
+                li
+                    button(class="backButton" onclick="window.location='/';") CUSTOMER REGISTRATION
+                li
+                    button(class="users" onclick="window.location='users';") USERS
+                li
+                    button(class="login" onclick="window.location='login';") LOGIN
+
+        h1(id="formTitleUsers") User table
+        script(src="static/userTable.js")
